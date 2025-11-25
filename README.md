@@ -1,30 +1,30 @@
 # Assignment-4-Clustering-Analysis
 Clustering Analysis – Construction Project Form Segmentation
 
-This project applies unsupervised learning to segment construction project forms into meaningful groups based on activity levels, workload patterns, and project characteristics. The analysis uses the Construction and Project Management Example Data and focuses on identifying operational differences that are not captured by the original closure label.
+This project uses clustering to group construction project forms based on how they behave during a project. Instead of predicting a single outcome like “open” or “closed,” the goal is to understand different types of forms and how much work they require. The dataset includes real construction project information such as form status, actions taken, comments, and project details.
 
 Industry and Dataset
 
-The dataset represents real construction project forms, including information on status, actions, comments, documentation, and project identifiers. Each record reflects a single form within a project workflow. The features used for clustering include numeric indicators such as open actions, total actions, and activity levels. The goal is to understand how different types of forms behave across projects.
+The dataset represents forms collected from construction projects. Each form captures activity such as how many actions were taken, how many items are overdue, and how much follow-up is required. These features help show how forms move through a project and how much effort they need from the team.
 
 Project Overview
 
-This notebook performs:
+The notebook includes:
 
-Data preparation, cleaning, and standardization
+Data cleaning and preparation
 
-Review of the original supervised label (is_closed)
+A review of the original label (is_closed)
 
-Elbow method and silhouette analysis to select the number of clusters
+Using the elbow method and silhouette score to choose the number of clusters
 
-K-means clustering using the chosen K
+Running K-means clustering on the selected features
 
-PCA visualization of cluster structure
+Visualizing clusters with PCA
 
-Comparison of clusters to the original label
+Comparing the clusters to the original label
 
-Creation of personas and action plans for each segment
+Creating personas and action plans for each cluster
 
 Summary of Findings
 
-The clustering results revealed distinct groups of forms that differ in workload, complexity, and project scale. Some clusters reflect routine, low-activity forms, while others show signs of higher workload or greater risk. These differences provide insights that go beyond the open-versus-closed label and highlight where teams may need support or where processes are already efficient.
+The clustering results identified different groups of forms that behave in unique ways. Some clusters include simple, low-effort forms, while others represent forms with more activity and higher workloads. A few clusters are linked to larger projects, and others show signs of higher risk due to the number of open or overdue actions. These patterns help show where project teams may need more support and where tasks are running smoothly. The results provide a clearer picture of how work actually moves through the construction process beyond the basic open-versus-closed status.
